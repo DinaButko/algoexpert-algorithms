@@ -44,24 +44,3 @@ def twoNumberSum(array, targetSum):
     return []
 
 
-
-from typing import List
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # Create a hash table to store the number and its index
-        table = {}
-
-        for i, num in enumerate(nums):
-            # Calculate the potential match
-            potentialMatch = target - num
-
-            # Check if potential match exists in the table
-            if potentialMatch in table:
-                # Return indices of the two numbers
-                return [table[potentialMatch], i]
-            else:
-                # Store the index of the current number
-                table[num] = i
-
-        # If no match found, return an empty list
-        return []
