@@ -44,3 +44,18 @@ def twoNumberSum(array, targetSum):
     return []
 
 
+# With index
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        numbers = {}
+
+        for index, number in enumerate(nums):
+            potentialValue = target - number
+
+            if potentialValue in numbers:
+                return [numbers[potentialValue], index]  # Return the indices
+            else:
+                numbers[number] = index  # Store the index of the number
+
+        return []  # Return an empty list if no solution is found

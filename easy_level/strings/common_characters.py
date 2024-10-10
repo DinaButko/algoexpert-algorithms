@@ -1,3 +1,7 @@
+import collections
+from typing import List
+
+
 def commonCharacters(strings):
     # 1. Create an empty dictionary
     charCounts = {}

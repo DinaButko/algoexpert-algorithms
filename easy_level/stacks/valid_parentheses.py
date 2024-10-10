@@ -1,6 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-
+        # O(n) time and O(n) space complexity (n - len of string)
         stack = []  # Initialize an empty stack
         mapping = {')': '(', '}': '{', ']': '['}  # Mapping of closing to opening brackets
 
